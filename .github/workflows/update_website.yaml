@@ -29,4 +29,4 @@ jobs:
           - name: "TTL Invalidation"
             run: |
               DISTRIBUTION_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text)
-              aws s3 cloudfront create-invalidation --distribution-id $hell --paths '/*'
+              aws s3 cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths '/*'
