@@ -1,0 +1,32 @@
+name: "Update-Website"
+
+on:
+    # push:
+    #     branches: main
+    workflow_dispatch: 
+
+jobs:
+    update-content:
+        runs-on: ubuntu-latest
+        permissions: 
+            id-token: write
+            contents: read
+        steps:
+          - name: "Checkout repo"
+            uses: actions/checkout@v3
+
+          - name: "Configure AWS Creds"
+            uses: aws-actions/configure-aws-credentials@v4.1.0
+            with:
+              aws-region: ${{ secrets.AWS_REGION }}
+              role-to-assume: ${{ secrets.OIDC_FRONT }}
+              role-session-name: role2
+
+          - name: "Syncing files"
+            run: |
+              aws sync . s3://nawafdes-cloud-resume-challenge/ --delete
+        
+          - name: "TTL Invalidation"
+            run: |
+              DISTRIBUTION_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text)
+              aws cloudfront create-invalidation --distribution-id $hell --paths '/*'
