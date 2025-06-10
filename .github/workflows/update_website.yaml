@@ -24,7 +24,7 @@ jobs:
 
           - name: "Syncing files"
             run: |
-              aws sync . s3://nawafdes-cloud-resume-challenge/ --delete
+              aws s3 sync . s3://nawafdes-cloud-resume-challenge/ --delete
         
           - name: "TTL Invalidation"
             run: |
