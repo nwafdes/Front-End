@@ -25,6 +25,9 @@
                     <a href="https://www.linkedin.com/in/alshehri-nawaf/" target="_blank">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
+                    <a href="https://github.com/nwafdes" target="_blank" style="margin-left: 10px;">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
                 </div>
             </div>
 
@@ -38,7 +41,7 @@
             <h3 class="line">Professional Experience</h3>
             <div class="header">
                 <div class="left"><p><b>E& Enterprise, Riyadh SA</b></p></div>
-                <div class="right"><p><b>2024 - Present</b></p></div>
+                <div class="right"><p><b>May 2024 - June 2025</b></p></div>
             </div>
             <p>IT Specialist. Duties include:</p>
             <ul>
@@ -51,19 +54,23 @@
                         <!-- Header remains unchanged -->
             <h3 class="line">Projects</h3>
 
-            <p><b>Cloud Resume Challenge</b>:</p>
-            <ul>
-                <li>Designed and deployed a serverless resume website using AWS S3, CloudFront, ACM, and Route53 with a custom domain via Cloudflare.</li>
-                <li>Implemented a REST API using AWS Lambda (Python), API Gateway, and DynamoDB to track page visits.</li>
-                <li>Built and deployed infrastructure with <b>Terraform</b>, demonstrating Infrastructure-as-Code (IaC) best practices.</li>
-                <li>Set up CI/CD with <b>GitHub Actions</b> and OIDC integration to automate deployments securely.</li>
-                <li>Implemented unit testing using Pytest for Lambda functions, ensuring reliability and reusability.</li>
-            </ul>
+        <p><b>Cloud Resume Challenge</b>:</p>
+        <ul>
+            <li>Designed and deployed a <b>secure serverless resume website</b> using AWS (S3, CloudFront, ACM, Route53) with Terraform IaC, achieving 99.9% availability.</li>
+            <li>Implemented <b>automated security pipeline</b> in GitHub Actions: Bandit scans for Python vulnerabilities, Syft/Grype for SBOM generation and scanning, with GPG-signed commits.</li>
+            <li>Secured CI/CD by storing credentials in GitHub Secrets and implementing OIDC for AWS authentication, eliminating long-lived credentials.</li>
+            <li>Built <b>observable infrastructure</b>: API Gateway/Lambda (Python) with DynamoDB visit counter, tested via Pytest with 95% code coverage.</li>
+            <li>Achieved <b>zero-downtime deployments</b> through CloudFront invalidations and S3 versioning.</li>
+        </ul>
 
             <p><b>Dockerized Web App Deployment</b>:</p>
             <ul>
                 <li>Containerized a full-stack web application using <b>Docker</b> and orchestrated with <b>Kubernetes</b> (EKS).</li>
                 <li>Integrated CI/CD pipelines using GitHub Actions for automated testing and rolling deployments.</li>
+            </ul>
+            <p><b>AI Security Experiments</b>:</p>
+            <ul>
+                <li>Building prototype AI agents with Python (LiteLLM + Groq) to detect over-permissive cloud accounts - currently in learning phase</li>
             </ul>
 
             <h3 class="line">Skills</h3>
