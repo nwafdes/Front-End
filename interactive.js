@@ -47,7 +47,7 @@ async function fetchVisitorCount() {
 // update the visitor count
 async function updateVisitorCount() {
   // Make a GET request to the getVisi.. api
-  const res = await fetch(api_url, { method: 'POST' });
+  const res = await fetch(api_url, { method: 'POST',headers: {"x-api-key": "6ZMb1OILNx1hYMFmBdurvKcy2mBHzib8wzRBGy39"} });
   // if connection not 200 throw and error
   if (!res.ok) throw new Error('Failed to update count');
   const data = await res.json();
