@@ -1,4 +1,4 @@
-const api_url =  "https://c5wxmbe439.execute-api.us-east-1.amazonaws.com/prod/visitors";
+const api_url =  "https://60h2ko3a49.execute-api.us-east-1.amazonaws.com/prod/visitors";
 const countEl = document.getElementById("count");
 
 // function to create a random value for the cookie
@@ -33,7 +33,7 @@ async function fetchVisitorCount() {
   // Make a GET request to the getVisi.. api
   const res = await fetch(api_url, {
   headers: {
-    "x-api-key": "6ZMb1OILNx1hYMFmBdurvKcy2mBHzib8wzRBGy39"
+    "x-api-key": "I8QYNljUps2cpMILlq9mZ9KnI3jTlKpS8sanuHvD"
   }
 });
   // if connection not 200 throw and error
@@ -47,7 +47,7 @@ async function fetchVisitorCount() {
 // update the visitor count
 async function updateVisitorCount() {
   // Make a GET request to the getVisi.. api
-  const res = await fetch(api_url, { method: 'POST',headers: {"x-api-key": "6ZMb1OILNx1hYMFmBdurvKcy2mBHzib8wzRBGy39"} });
+  const res = await fetch(api_url, { method: 'POST',headers: {"x-api-key": "I8QYNljUps2cpMILlq9mZ9KnI3jTlKpS8sanuHvD"} });
   // if connection not 200 throw and error
   if (!res.ok) throw new Error('Failed to update count');
   const data = await res.json();
