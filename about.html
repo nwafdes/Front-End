@@ -2,28 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nawaf Alshehri - Cloud Security Engineer</title>
+    <title>Nawaf Alshehri - Cloud & DevOps Engineer</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
     <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Inline Styles -->
+    <style>
+        .project { margin-bottom: 20px; }
+        .project h4 { margin-bottom: 5px; }
+        .project p { margin-top: 0; margin-bottom: 5px; }
+        .project ul { margin-top: 5px; }
+        .project a { color: #007bff; text-decoration: none; }
+        .project a:hover { text-decoration: underline; }
+
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body onload="checkCookie()">
+
     <div class="rec">
         <div class="counter">
             <p id="count" style="margin-bottom: 0px;">0</p>
-            <small>Visits</small> </div>
+            <small>Visits</small>
+        </div>
     </div>
+
     <section class="container">
         <div class="rectangle">
             <div class="header">
                 <div class="left">
                     <h1>Nawaf Alshehri</h1>
-                    <h3>Cloud Security Engineer</h3>
+                    <h3>Cloud & DevOps Engineer</h3>
                 </div>
                 <div class="right">
                     <a href="https://www.linkedin.com/in/alshehri-nawaf/" target="_blank">
@@ -35,92 +65,89 @@
                 </div>
             </div>
 
-            <h3 class="line">Summary</h3>
+            <h3 class="line">Technical Profile</h3>
             <p>
-                Cloud Security Engineer with experience designing, implementing, and maintaining CI/CD pipelines and secure cloud infrastructure. 
-                Skilled in scripting (Python, Bash, PowerShell) and containerization (Docker, Kubernetes) with a strong commitment to ensuring 
-                system reliability, performance, and scalability. Proven mentor with a passion for promoting DevOps best practices.
+                A results-oriented Cloud and DevOps Engineer with certified expertise in AWS architecture and a proven ability to enhance system reliability and efficiency through automation. Hands-on experience architecting and deploying scalable infrastructure using Terraform, building robust CI/CD pipelines, and developing applications with modern AI/ML frameworks like LangChain and Hugging Face. Adept at scripting in Python and PowerShell to automate complex operational tasks, reducing manual effort and improving security posture.
             </p>
+
+            <h3 class="line">Cloud & DevOps Projects</h3>
+
+            <div class="project">
+                <h4>Cloud Resume Challenge (This Website)</h4>
+                <p>
+                    Architected and deployed this serverless resume website on AWS to demonstrate full-stack DevOps and cloud security principles.
+                    <a href="https://github.com/nwafdes/Serverless-infrastructure" target="_blank">[View on GitHub]</a>
+                </p>
+                <ul>
+                    <li><strong>Infrastructure as Code (IaC):</strong> Deployed all AWS resources (S3, CloudFront, Lambda, DynamoDB) using Terraform for repeatable, version-controlled infrastructure.</li>
+                    <li><strong>Secure CI/CD Pipeline:</strong> Built a security-first pipeline in GitHub Actions that automates testing, SBOM generation (Syft/Grype), and deployment on every commit.</li>
+                    <li><strong>Zero-Trust Security:</strong> Eliminated long-lived credentials by using OIDC for passwordless authentication between GitHub Actions and AWS IAM.</li>
+                    <li><strong>Full-Stack Observability:</strong> Developed the back-end visitor counter with Python on AWS Lambda, with API Gateway logs and metrics streamed to CloudWatch. Achieved 95% test coverage with Pytest.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h4>AI-Powered Knowledge Agent</h4>
+                <p>
+                    Developed a CLI-based AI agent to perform semantic search and answer questions against a personal knowledge base of markdown files.
+                </p>
+                <ul>
+                    <li><strong>RAG Architecture:</strong> Engineered a Retrieval-Augmented Generation (RAG) pipeline using LangChain to orchestrate the workflow.</li>
+                    <li><strong>AI/ML Stack:</strong> Utilized Hugging Face models for text embeddings and FAISS for efficient, local vector storage and retrieval.</li>
+                    <li><strong>LLM Integration:</strong> Integrated the Llama3 model via the Groq API for fast, real-time conversational responses.</li>
+                </ul>
+            </div>
 
             <h3 class="line">Professional Experience</h3>
             <div class="header">
-                <div class="left"><p><b>3i Holding Company, Riyadh SA</b></p></div>
-                <div class="right"><p><b>July 2025 - Present</b></p></div>
+                <div class="left"><p><strong>E& Enterprise, Riyadh SA</strong></p></div>
+                <div class="right"><p><strong>May 2024 - June 2025</strong></p></div>
             </div>
-            <p>IT Specialist. Duties include:</p>
+            <p>IT Specialist. Achievements include:</p>
             <ul>
-                <li>Automating repetitive tasks using PowerShell.</li>
-                <li>Managing Azure Active Directory.</li>
-            </ul>
-            <div class="header">
-                <div class="left"><p><b>E& Enterprise, Riyadh SA</b></p></div>
-                <div class="right"><p><b>May 2024 - June 2025</b></p></div>
-            </div>
-            <p>IT Specialist. Duties include:</p>
-            <ul>
-                <li>Automated operational tasks using PowerShell, enhancing AD and Microsoft 365 management.</li>
-                <li>Managed Microsoft 365 Admin Center and AD, implementing enterprise IAM policies.</li>
-                <li>Created custom rules in Kaspersky EDR to eliminate vulnerabilities.</li>
-                <li>Designed and secured AD environments with access controls and auditing.</li>
+                <li>Automated key operational tasks and user lifecycle management in Microsoft 365 and Active Directory using PowerShell, reducing manual administration time by an estimated [X hours per week].</li>
+                <li>Engineered and enforced enterprise-wide security policies and custom detection rules, strengthening the organization's security posture and reducing vulnerability exposure by [an estimated X%].</li>
+                <li>Administered and secured Active Directory environments, implementing robust access control, GPOs, and auditing configurations to ensure compliance and mitigate unauthorized access risks.</li>
             </ul>
 
-            <h3 class="line">Projects</h3>
-
-        <p><b>Cloud Resume Challenge</b>:</p>
-        <ul>
-            <li>Designed and deployed a <b>secure serverless resume website</b> using AWS (S3, CloudFront, ACM, Route53) with Terraform IaC, achieving 99.9% availability.</li>
-            <li>Implemented <b>automated security pipeline</b> in GitHub Actions: Bandit scans for Python vulnerabilities, Syft/Grype for SBOM generation and scanning, with GPG-signed commits.</li>
-            <li>Secured CI/CD by storing credentials in GitHub Secrets and implementing OIDC for AWS authentication, eliminating long-lived credentials.</li>
-            <li>Built <b>observable infrastructure</b>: API Gateway/Lambda (Python) with DynamoDB visit counter, tested via Pytest with 95% code coverage.</li>
-            <li>Achieved <b>zero-downtime deployments</b> through CloudFront invalidations and S3 versioning.</li>
-        </ul>
-
-            <p><b>Dockerized Web App Deployment</b>:</p>
+            <h3 class="line">Technical Skills</h3>
             <ul>
-                <li>Containerized a full-stack web application using <b>Docker</b> and orchestrated with <b>Kubernetes</b> (EKS).</li>
-                <li>Integrated CI/CD pipelines using GitHub Actions for automated testing and rolling deployments.</li>
-            </ul>
-            <p><b>AI Security Experiments</b>:</p>
-            <ul>
-                <li>Building prototype AI agents with Python (LiteLLM + Groq) to detect over-permissive cloud accounts - currently in learning phase</li>
-            </ul>
-
-            <h3 class="line">Skills</h3>
-            <ul>
-                <li><b>Cloud Platforms:</b> AWS (S3, EC2, RDS, Lambda, API Gateway, EKS), Azure (VMs, Storage)</li>
-                <li><b>DevOps & IaC:</b> GitHub Actions, Terraform, Docker, Kubernetes</li>
-                <li><b>Scripting & Programming:</b> Python, Bash, advanced PowerShell, familiarity with javascript</li>
-                <li><b>Monitoring & Security:</b> CloudWatch, IAM Roles, OIDC, SSL, advanced Security Best Practices</li>
-                <li><b>Configuration Management:</b> Familiarity with Chef, Ansible</li>
-                <li><b>Version Control:</b> Git, GitHub</li>
-                <li><b>OS:</b> Linux (Amazon Linux, AlmaLinux), Windows Server</li>
-                <li><b>Soft Skills:</b> Strong communication (English C1+), team collaboration, stakeholder engagement</li>
+                <li><strong>Cloud Platforms:</strong> AWS (S3, Lambda, API Gateway, DynamoDB, CloudFront, ACM, Route 53)</li>
+                <li><strong>AI / MLOps:</strong> LangChain, Hugging Face, FAISS, Retrieval-Augmented Generation (RAG)</li>
+                <li><strong>Infrastructure as Code (IaC):</strong> Terraform</li>
+                <li><strong>CI/CD:</strong> GitHub Actions, Jenkins</li>
+                <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes (CKA In Progress)</li>
+                <li><strong>Scripting & Automation:</strong> Python, Bash, PowerShell</li>
+                <li><strong>Security:</strong> Identity & Access Management (IAM), Security Policy Implementation, Penetration Testing</li>
+                <li><strong>Networking:</strong> TCP/IP, DNS, HTTP/S, Load Balancing, Firewalls</li>
             </ul>
 
             <h3 class="line">Certifications</h3>
             <ul>
                 <li>AWS Certified Solutions Architect – Associate</li>
-                <li>CompTIA Security+</li>
                 <li>eLearnSecurity Junior Penetration Tester (eJPT)</li>
-                <li>CCNA</li>
+                <li>CompTIA Security+</li>
+                <li>CCNA (Cisco Certified Network Associate)</li>
             </ul>
 
             <h3 class="line">Education</h3>
             <div class="header">
                 <div class="left"> 
-                    <p><b>Bachelor’s Degree in Applied Network Systems Engineering</b></p>
+                    <p><strong>Bachelor’s Degree in Applied Network Systems Engineering</strong></p>
                     <p>College Of Telecom & Electronics</p>
                 </div>
-                <div class="right"><p><b>Mar 2020 - July 2023</b></p></div>
+                <div class="right"><p><strong>Mar 2020 - July 2023</strong></p></div>
             </div>
         </div>
     </section>
 
-    
+    <!-- Social Icons -->
     <div class="social-icons">
         <a href="https://x.com/Nwaf_IT" target="_blank" class="fa-brands fa-twitter"></a>
         <a href="https://www.youtube.com/@NAWAF-SUDO" target="_blank" class="fa-brands fa-youtube"></a>
     </div>
+
+    <!-- JavaScript -->
     <script type="text/javascript" src="interactive.js"></script>
 </body>
 </html>
